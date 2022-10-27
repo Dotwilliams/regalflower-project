@@ -17,7 +17,8 @@
 
                            <br> <br>
                            <ul class="list-group list-group-flush">
-                <a href="{{ route('dashboard') }}" class="btn btn-warning btn-sm btn-block">My Acct</a>
+                <a href="{{ route('dashboard') }}" class="btn btn-warning btn-sm btn-block">Dashboard</a>
+                <a href="" class="btn btn-warning btn-sm btn-block">Wishlist</a>
                 <a href=" {{ route('user.profile') }} " class="btn btn-warning btn-sm btn-block">Profile Update</a>
                 <a href="{{ route('change.password') }}" class="btn btn-warning btn-sm btn-block">Change password</a>
                 <a href=" {{route('user.logout')}} " class="btn btn-danger btn-sm btn-block">Logout</a>

@@ -1,10 +1,16 @@
+@php
+   $prefix = Request::route()->getPrefix();
+   $route = Route::current()->getName();
+
+@endphp
+
 <aside class="main-sidebar">
     <!-- sidebar-->
     <section class="sidebar">
 
         <div class="user-profile">
 			<div class="ulogo">
-				 <a href="index.html">
+				 <a href="#">
 				  <!-- logo for regular state and mobile devices -->
 					 <div class="d-flex align-items-center justify-content-center">
 						  <img src="{{ asset('backend/images/logo-dark.png') }}" alt="">
@@ -17,12 +23,85 @@
       <!-- sidebar menu-->
       <ul class="sidebar-menu" data-widget="tree">
 
-		<li>
-          <a href="index.html">
+		<li class="{{ ($route == 'dashboard')? 'active':'' }}">
+          <a href="{{ url('admin/dashboard') }}">
             <i data-feather="pie-chart"></i>
 			<span>Dashboard</span>
           </a>
         </li>
+
+        <li class="treeview {{ ($prefix == '/brand')? 'active':'' }}">
+            <a href="">
+              <i data-feather="message-circle"></i>
+              <span>Brands</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="{{ ($route == '/all.brand')? 'active':'' }}"><a href=" {{ route('all.brand') }} "><i class="ti-more"></i>All Brand</a></li>
+            </ul>
+          </li>
+
+          <li class="treeview {{ ($prefix == '/category')? 'active':'' }}">
+            <a href="#">
+              <i data-feather="message-circle"></i>
+              <span>Category</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href=" {{ route('all.category') }} "><i class="ti-more"></i>All Category</a></li>
+              <li><a href=" {{ route('all.subcategory') }} "><i class="ti-more"></i>All Sub Category</a></li>
+
+              <li><a href=" {{ route('all.subsubcategory') }} "><i class="ti-more"></i>Sub->Sub Category</a></li>
+
+            </ul>
+          </li>
+
+          <li class="treeview  {{ ($prefix == '/product')? 'active':'' }} ">
+            <a href="#">
+              <i data-feather="message-circle"></i>
+              <span>Product</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{ route('add-product') }}"><i class="ti-more"></i>Add Product</a></li>
+              <li><a href="{{ route('manage-product') }}"><i class="ti-more"></i>Manage Product</a></li>
+            </ul>
+          </li>
+
+          <li class="treeview  {{ ($prefix == '/slider')? 'active':'' }} ">
+            <a href="#">
+              <i data-feather="message-circle"></i>
+              <span>Sliders</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{ route('manage-slider') }}"><i class="ti-more"></i>Manage Slider</a></li>
+            </ul>
+          </li>
+
+          <li class="treeview {{ ($prefix == '/coupons')?'active':'' }}  ">
+            <a href="#">
+              <i data-feather="file"></i>
+              <span>Coupons</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="{{ ($route == 'manage-coupon')? 'active':'' }}"><a href="{{ route('manage-coupon') }}"><i class="ti-more"></i>Manage Coupon</a></li>
+
+
+
+            </ul>
+          </li>        
 
         <li class="treeview">
           <a href="#">

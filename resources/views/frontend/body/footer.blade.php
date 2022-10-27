@@ -1,4 +1,4 @@
-<footer id="footer" class="footer color-bg">
+<footer id="footer" class="footer color-bg" style="margin-top: 20px">
   <div class="footer-bottom">
     <div class="container">
       <div class="row">
@@ -112,6 +112,7 @@
       </div>
     </div>
   </div>
+
   <div class="copyright-bar">
     <div class="container">
       <div class="col-xs-12 col-sm-6 no-padding social">
@@ -119,7 +120,7 @@
           <li class="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
           <li class="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
           <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
-          <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
+          {{-- <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li> --}}
           <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li>
           <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li>
           <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
@@ -139,4 +140,18 @@
       </div>
     </div>
   </div>
+
+    <div class="copyright-footer" style="background: #151212">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <p style="text-align: center; color:antiquewhite; margin: 10px; font-size: 10px;">@ COPYRIGHT REGALFLOWER.COM.NG </p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
 </footer>

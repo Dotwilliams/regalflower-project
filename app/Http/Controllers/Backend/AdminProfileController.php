@@ -64,7 +64,7 @@ class AdminProfileController extends Controller
             Auth::logout();
             return redirect()->route('admin.logout') ;
         }else{
-            return redirect()->back();
+            return redirect()->back()->with('notification');
         }
 
     }//end method
